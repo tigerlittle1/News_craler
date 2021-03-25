@@ -1,4 +1,5 @@
 資料抓取 Web_crawler.py:
+
     get_google_URL_from_topic()#抓取google news的分類主題及其對應的URL
     get_google_URL_from_keyword(list) #依照給定list中的關鍵字抓取其對應的URL
     get_google_news_infon_by_URL_list(URL,para) #依照給定的URL抓取新聞內容(para為是否要平行化)
@@ -17,6 +18,7 @@
     直接執行Web_crawler.py即可進行google 及 yahoo 新聞資料的爬取並且匯入Elasticsearch
 
 Elasticsearch 搜尋 Elasticsearch_search.py
+
     es.search(query)#給定query即可回傳搜尋結果
 
     Web_crawler的所有設定在cfg/crawler.yaml中可以做設定:
