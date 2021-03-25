@@ -101,16 +101,21 @@ def get_yahoo_news_infon_by_URL(URL = ""):
 
 def get_yahoo_news_infon_by_URL_list(URLs = [],para = True):
     #print(URLs)
-    threading_s = []
     results = []
-    if para:
-        for i,URL in enumerate(URLs):
-            threading_s.append(Crawker_Thread(target=get_yahoo_news_infon_by_URL,
-                                              args=(URL)))
-            threading_s[i].start()
 
-        for i in range(len(URLs)):
-            results += threading_s[i].get_result()
+    seg_length = 15
+    a = range(len(URLs))
+    seg_index = [a[x:x + seg_length] for x in range(0, len(a), seg_length)]
+    if para:
+        for k in seg_index:
+            threading_s = []
+            for i , index in enumerate(k):
+                threading_s.append(Crawker_Thread(target=get_yahoo_news_infon_by_URL,
+                                                  args=(URLs[index])))
+                threading_s[i].start()
+
+            for i in range(len(threading_s)):
+                results += threading_s[i].get_result()
     else:
         for i in range(len(URLs)):
             results += get_yahoo_news_infon_by_URL(URLs[i])

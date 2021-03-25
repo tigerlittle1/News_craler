@@ -35,12 +35,12 @@ if __name__ == '__main__':
 
     start = time.time()
 
-    if config["google_get_org_topic"]:
-        results += get_google_news_infon_by_URL_list(get_google_URL_from_topic(),config["google_Parallel"])
-    if config["google_search_key_word"] != None:
-        results += get_google_news_infon_by_URL_list(get_google_URL_from_keyword(config["google_search_key_word"]),config["google_Parallel"])
+    if config["yahoo_get_org_topic"]:
+        google_URL_list += get_google_URL_from_topic()
+    if config["yahoo_search_key_word"] != None:
+        google_URL_list += get_google_URL_from_keyword(config["google_search_key_word"])
 
-    #results += get_google_news_infon_by_URL_list(google_URL_list,config["google_Parallel"])
+    results += get_google_news_infon_by_URL_list(google_URL_list,config["google_Parallel"])
 
     print("google news 資料抓取時間:",time.time()-start)
     start = time.time()
@@ -55,9 +55,9 @@ if __name__ == '__main__':
     print("yahoo news 資料抓取時間:",time.time()-start)
     print(len(results))
 
-    E = Elast()
-    E.load_elasticsearch()
-    E.import_data(results)
+    # E = Elast()
+    # E.load_elasticsearch()
+    # E.import_data(results)
 
     # for result in results:
     #     print(result)
