@@ -1,0 +1,29 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "title": "氣象"
+          }
+        },
+        {
+          "match": {
+            "title": "天氣"
+          }
+        },
+        {
+          "match": {
+            "infon": "氣象"
+          }
+        },
+        {
+          "match": {
+            "infon ": "天氣"
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}

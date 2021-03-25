@@ -1,0 +1,29 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "title": "水庫"
+          }
+        },
+        {
+          "match": {
+            "title": "缺水"
+          }
+        },
+        {
+          "match": {
+            "infon ": "水庫"
+          }
+        },
+        {
+          "match": {
+            "infon ": "缺水"
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}

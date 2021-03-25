@@ -1,0 +1,19 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "title": "旅遊泡泡"
+          }
+        },
+        {
+          "match": {
+            "infon ": "旅遊泡泡"
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}

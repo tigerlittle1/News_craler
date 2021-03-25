@@ -1,0 +1,44 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "topic": "健康"
+          }
+        },
+        {
+          "bool": {
+            "must_not": {
+              "bool": {
+                "should": [
+                  {
+                    "match": {
+                      "title": "COVID-19"
+                    }
+                  },
+                  {
+                    "match": {
+                      "infon": "COVID-19"
+                    }
+                  },
+                  {
+                    "match": {
+                      "title": "武漢肺炎"
+                    }
+                  },
+                  {
+                    "match": {
+                      "infon": "武漢肺炎"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}

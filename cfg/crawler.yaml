@@ -1,0 +1,9 @@
+#google
+google_Parallel : True # 是否要爬取google news的topic
+google_get_org_topic : True #是否平行化
+google_search_key_word : [ 川普,中國,台北市立動物園,捷運,明星,AI,人工智慧,深度學習,大學放榜,大學 ] #google news要爬取新聞的關鍵字
+
+#yahoo
+yahoo_Parallel : True #是否要爬取yahoo news的topic
+yahoo_get_org_topic : True #是否平行化
+yahoo_search_key_word : [ 川普,中國,台北市立動物園,捷運,明星,AI,人工智慧,深度學習,大學放榜,大學 ] #yahoo news要爬取新聞的關鍵字

@@ -1,0 +1,29 @@
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "title": "股票"
+          }
+        },
+        {
+          "match": {
+            "title": "股市"
+          }
+        },
+        {
+          "match": {
+            "infon ": "股票"
+          }
+        },
+        {
+          "match": {
+            "infon ": "股市"
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}

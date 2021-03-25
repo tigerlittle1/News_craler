@@ -1,0 +1,41 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "title": "深度學習"
+                }
+              },
+              {
+                "match": {
+                  "infon": "深度學習"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "title": "課程"
+                }
+              },
+              {
+                "match": {
+                  "infon": "課程"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}

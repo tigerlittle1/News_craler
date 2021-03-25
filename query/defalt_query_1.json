@@ -1,0 +1,25 @@
+{"query": {
+    "bool": {
+      "should": [
+        {"match": {
+          "topic": "COVID-19"
+        }},
+        {
+          "match": {
+            "title": "COVID-19"
+          }
+        },
+        {
+          "match": {
+            "infon ": "COVID-19"
+          }
+        },
+        {
+          "match": {
+            "infon ": "武漢肺炎"
+          }
+        }
+      ]
+    }
+  },
+  "size": 10}

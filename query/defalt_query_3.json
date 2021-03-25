@@ -1,0 +1,41 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "title": "鮭魚"
+                }
+              },
+              {
+                "match": {
+                  "title": "改名"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "infon": "鮭魚"
+                }
+              },
+              {
+                "match": {
+                  "infon": "改名"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}

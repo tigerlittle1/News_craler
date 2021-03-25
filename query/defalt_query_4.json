@@ -1,0 +1,57 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "title": "疫苗"
+                }
+              },
+              {
+                "match": {
+                  "infon": "疫苗"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "title": "接種"
+                }
+              },
+              {
+                "match": {
+                  "infon": "接種"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "match": {
+                  "title": "意願"
+                }
+              },
+              {
+                "match": {
+                  "infon": "意願"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "size": 10
+}
