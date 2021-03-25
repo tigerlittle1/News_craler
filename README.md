@@ -33,4 +33,8 @@ Elasticsearch 搜尋 Elasticsearch_search.py
 -query#10個query檔案
 -utils#其他程序
 
+安裝套件:
+
+    pip install -r requirements.txt
+
 
